@@ -1,22 +1,21 @@
-import LinkedList.LinkedList;
-import Queue.Queue;
-import stack.Stack;
+import Tree.Tree;
 
 public class Main {
     public static void main(String[] args) {
-
-        Queue queue = new Queue();
-        queue.enqueue(7);
-        queue.enqueue(8);
-        queue.enqueue(9);
-        queue.enqueue(10);
-        queue.enqueue(11);
-        queue.printQueue();
-        System.out.println("Dequqed Value " + queue.dequeue());
-        queue.printQueue();
-        System.out.println("peek value " + queue.peek());
-        queue.printQueue();
-
-
+         Tree bst = new Tree();
+         bst.insertNode(5, bst.root);
+         bst.insertNode(3, bst.root);
+         bst.insertNode(2, bst.root);
+         bst.insertNode(4, bst.root);
+         bst.insertNode(7, bst.root);
+         bst.insertNode(6, bst.root);
+         bst.insertNode(8, bst.root);
+        bst.inorder();
+        bst.preOrder();
+        bst.postOrder();
+        bst.deleteNode(2);
+        bst.deleteNode(5);
+        bst.print();
+        bst.MaxDepthFind();
     }
 }
